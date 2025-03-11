@@ -19,4 +19,5 @@ st.header("ข้อมูลโรคหัวใจ")
 st.write(dt.head(10))
 
 st.subheader("สถิติข้อมูลโรคหัวใจ")
-st.write('ผลรวม')
+st.write(dt.describe())
+
