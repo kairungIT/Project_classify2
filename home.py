@@ -20,4 +20,4 @@ st.write(dt.head(10))
 
 st.subheader("สถิติข้อมูลโรคหัวใจ")
 st.write(dt.describe())
-st.write(dt.groupby('sex'))
+st.write(dt.groupby('Sex')['Sex'].count())
