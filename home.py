@@ -22,9 +22,15 @@ st.subheader("สถิติข้อมูลโรคหัวใจ")
 st.write(dt.describe())
 st.write("สถิติจำนวนเพศหญิง=0 เพศชาย=1")
 st.write(dt.groupby('Sex')['Sex'].count())
-
 count_male = dt.groupby('Sex').size()[1]
 count_female = dt.groupby('Sex').size()[0]
 dx = [count_male, count_female]
 dx2 = pd.DataFrame(dx, index=["Male", "Female"])
 st.bar_chart(dx2)
+
+average_male_age = dt[dt['Sex'] == 1]['Age'].mean()
+average_female_age = dt[dt['Sex'] == 0]['Age'].mean()
+
+dxage = [average_male_age, average_female_age]
+dxage2 = pd.DataFrame(dxage, index=["Male", "Female"])
+st.bar_chart(dxage2)
