@@ -58,6 +58,7 @@ A8 = st.number_input("กรุณาเลือกข้อมูล8")
 A9 = st.number_input("กรุณาเลือกข้อมูล9")
 A10 = st.number_input("กรุณาเลือกข้อมูล10")
 A11 = st.number_input("กรุณาเลือกข้อมูล11")
+selected_name = st.selectbox("เลือกชื่อ", ["1","2","3","4"])
 
 if st.button("ทำนายผล"):
     #st.write("ทำนาย")
